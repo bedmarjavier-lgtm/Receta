@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+  background-color: var(--stone-100);
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+}
+.recipe-card {
+  background-color: var(--white);
+  max-width: 736px;
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.recipe-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+h1 {
+  font-family: 'Young Serif', serif;
+  color: var(--stone-900);
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-family: 'Young Serif', serif;
+  color: var(--brown-800);
+  margin-top: 32px;
+}
+
+.prep-time {
+  background-color: var(--rose-50);
+  padding: 24px;
+  border-radius: 12px;
+  margin: 32px 0;
+}
+
+.prep-time h3 {
+  color: var(--rose-800);
+  margin-top: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+td {
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--stone-150);
+}
+
+tr:last-child td {
+  border-bottom: none; /* Quita la línea a la última fila */
+}
+
+.stat {
+  color: var(--brown-800);
+  font-weight: 700;
+}
+.recipe-content {
+  padding: 0 40px 40px 40px; /* Esto da espacio a los lados y abajo, pero no arriba para que pegue a la foto */
+}
+
+.nutrition table {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.nutrition td {
+  padding: 12px 16px; /* Más espacio interno en las celdas */
+}
+@media (max-width: 700px) {
+  html, body {
+    overflow-x: hidden; /* Esto prohíbe el deslizamiento lateral */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recipe-card {
+    max-width: 100%; /* Asegura que la tarjeta no sea más ancha que el móvil */
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+  .recipe-image {
+    border-radius: 0; /* La foto llega hasta los bordes del móvil */
+    margin-bottom: 24px;
+  }
+
+  .recipe-content {
+    padding: 0 24px 24px 24px; /* Un margen más pequeño para móviles */
+  }
+}
