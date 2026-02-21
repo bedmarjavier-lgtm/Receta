@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: #edf2f8; /* Color de fondo de la página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2.5rem;
+}
+
+/* Configuración de la Rejilla */
+.testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 68.75rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "card1 card1 card2 card3"
+        "card4 card5 card5 card3";
+}
+
+/* Estilos comunes para todas las tarjetas */
+.card {
+    padding: 1.875rem;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.05);
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.937rem;
+    margin-bottom: 15px;
+}
+
+.card__img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+.card__lead {
+    font-size: 1.25rem;;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.card__quote {
+    font-size: 0.8125rem;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+/* Colores específicos según la imagen */
+.card--purple { 
+    grid-area: card1; 
+    background-color: #7541c8; 
+    color: white;
+    /* Aquí iría la imagen de las comillas como background */
+}
+
+.card--gray { 
+    grid-area: card2; 
+    background-color: #48556a; 
+    color: white; 
+}
+
+.card--white-long { 
+    grid-area: card3; 
+    background-color: white; 
+    color: #48556a; 
+}
+
+.card--white-short { 
+    grid-area: card4; 
+    background-color: white; 
+    color: #48556a; 
+}
+
+.card--black { 
+    grid-area: card5; 
+    background-color: #19212e; 
+    color: white; 
+}
+
+/* Ajuste para tablets y móviles */
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "card1"
+            "card2"
+            "card4"
+            "card5"
+            "card3";
+    }
+}
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-areas: 
+            "card1"
+            "card2"
+            "card4"
+            "card5"
+            "card3"; /* El orden vertical que tú elijas */
+    }
+}
